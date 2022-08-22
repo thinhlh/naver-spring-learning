@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  naver-spring-docker-1:
+    build:
+      context: scripts
+      dockerfile: Dockerfile
+    container_name: naver-spring-docker-1
+    restart: always
+    ports:
+      - 8080:8080
+
+  naver-spring-docker-2:
+    build:
+      context: scripts
+      dockerfile: Dockerfile
+    container_name: naver-spring-docker-2
+    restart: always
+    ports:
+      - 8081:8080
