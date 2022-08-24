@@ -3,6 +3,7 @@
 ## Exercises includes:
 1. BTVN 1st - 1st week
 2. BTVN 2nd - 1st week
+3. BTVN 1st - 2nd week
 ---
 
 ## Semantic Commit Messages
