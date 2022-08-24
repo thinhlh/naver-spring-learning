@@ -10,6 +10,7 @@ database: H2 DB
 ```
 
 ## Application endpoints
+> All body should be JSON formatted. Server already have Validation.
 
 ### Get departments
 Get departments
