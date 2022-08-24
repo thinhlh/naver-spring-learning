@@ -26,6 +26,6 @@ public class Department {
     private String description;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "department", orphanRemoval = true)
-    private List<Employee> employees;
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "department", orphanRemoval = true)
+    private List<Employee> employees = new java.util.ArrayList<>();
 }

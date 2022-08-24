@@ -13,7 +13,6 @@ import java.util.List;
 public class DepartmentResponse  extends Department {
 
     @JsonProperty("employees")
-    @Override
     public List<Employee> getEmployees() {
         return super.getEmployees();
     }
