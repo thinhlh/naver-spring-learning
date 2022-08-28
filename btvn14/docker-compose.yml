@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: naver-btvn3
+    container_name: naver-btvn4
     restart: always
     ports:
       - 8080:8080
