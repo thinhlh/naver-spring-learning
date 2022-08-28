@@ -99,3 +99,10 @@ Delete an employee. **PERMANENT DELETE ALERT**
 ```
 DELETE /employee/delete/{id}
 ```
+
+### Get a computer by type
+Get a computer by it's `type` either `pc` or `server`
+
+```
+GET /{type}
+```
