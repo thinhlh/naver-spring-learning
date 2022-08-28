@@ -1,24 +1,22 @@
-package com.thinhlh.btvn13.app.department.data.service;
+package com.thinhlh.btvn14.app.department.data.service;
 
-import com.thinhlh.btvn13.app.department.controller.dto.CreateDepartmentDTO;
-import com.thinhlh.btvn13.app.department.controller.dto.DepartmentMybasticResponse;
-import com.thinhlh.btvn13.app.department.controller.dto.DepartmentResponse;
-import com.thinhlh.btvn13.app.department.controller.dto.UpdateDepartmentDTO;
-import com.thinhlh.btvn13.app.department.data.repository.DepartmentMybasticRepository;
-import com.thinhlh.btvn13.app.department.data.repository.DepartmentRepository;
-import com.thinhlh.btvn13.app.department.domain.entity.Department;
-import com.thinhlh.btvn13.app.department.domain.service.DepartmentService;
-import com.thinhlh.btvn13.exceptions.NotFoundException;
+import com.thinhlh.btvn14.app.department.controller.dto.CreateDepartmentDTO;
+import com.thinhlh.btvn14.app.department.controller.dto.DepartmentMybasticResponse;
+import com.thinhlh.btvn14.app.department.controller.dto.DepartmentResponse;
+import com.thinhlh.btvn14.app.department.controller.dto.UpdateDepartmentDTO;
+import com.thinhlh.btvn14.app.department.data.repository.DepartmentMybasticRepository;
+import com.thinhlh.btvn14.app.department.data.repository.DepartmentRepository;
+import com.thinhlh.btvn14.app.department.domain.entity.Department;
+import com.thinhlh.btvn14.app.department.domain.service.DepartmentService;
+import com.thinhlh.btvn14.exceptions.NotFoundException;
 import lombok.RequiredArgsConstructor;
-import lombok.SneakyThrows;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
-import java.util.UUID;
 
-import static com.thinhlh.btvn13.config.constants.MessageConstants.DEPARTMENT_NOT_FOUND;
+import static com.thinhlh.btvn14.config.constants.MessageConstants.DEPARTMENT_NOT_FOUND;
 
 @Service
 @RequiredArgsConstructor
@@ -35,7 +33,6 @@ public class DepartmentServiceImpl implements DepartmentService {
     @Override
     public List<DepartmentMybasticResponse> getDepartments() {
         return departmentMybasticRepository.getDepartments();
-//        return departmentRepository.findAll();
     }
 
     @Override
@@ -45,6 +42,16 @@ public class DepartmentServiceImpl implements DepartmentService {
             return mapper
                     .typeMap(Department.class, DepartmentResponse.class)
                     .map(department.get());
+        } else {
+            throw new NotFoundException(DEPARTMENT_NOT_FOUND);
+        }
+    }
+
+    @Override
+    public DepartmentMybasticResponse getDepartmentByIdWithTotalEmployees(Long id) {
+        var department = departmentMybasticRepository.getDepartmentById(id);
+        if (department != null) {
+            return department;
         } else {
             throw new NotFoundException(DEPARTMENT_NOT_FOUND);
         }

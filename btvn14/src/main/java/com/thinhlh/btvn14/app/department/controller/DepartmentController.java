@@ -1,13 +1,13 @@
-package com.thinhlh.btvn13.app.department.controller;
+package com.thinhlh.btvn14.app.department.controller;
 
-import com.thinhlh.btvn13.app.department.controller.dto.CreateDepartmentDTO;
-import com.thinhlh.btvn13.app.department.controller.dto.DepartmentMybasticResponse;
-import com.thinhlh.btvn13.app.department.controller.dto.DepartmentResponse;
-import com.thinhlh.btvn13.app.department.controller.dto.UpdateDepartmentDTO;
-import com.thinhlh.btvn13.app.department.domain.entity.Department;
-import com.thinhlh.btvn13.app.department.domain.service.DepartmentService;
-import com.thinhlh.btvn13.base.BaseController;
-import com.thinhlh.btvn13.base.BaseResponse;
+import com.thinhlh.btvn14.app.department.controller.dto.CreateDepartmentDTO;
+import com.thinhlh.btvn14.app.department.controller.dto.DepartmentMybasticResponse;
+import com.thinhlh.btvn14.app.department.controller.dto.DepartmentResponse;
+import com.thinhlh.btvn14.app.department.controller.dto.UpdateDepartmentDTO;
+import com.thinhlh.btvn14.app.department.domain.entity.Department;
+import com.thinhlh.btvn14.app.department.domain.service.DepartmentService;
+import com.thinhlh.btvn14.base.BaseController;
+import com.thinhlh.btvn14.base.BaseResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -29,6 +29,11 @@ public class DepartmentController extends BaseController {
     @GetMapping("/department/{id}")
     private ResponseEntity<BaseResponse<DepartmentResponse>> getDepartmentById(@PathVariable("id") Long id) {
         return successResponse(departmentService.getDepartmentById(id));
+    }
+
+    @GetMapping("/department/with-total-employees/{id}")
+    private ResponseEntity<BaseResponse<DepartmentMybasticResponse>> getDepartmentByIdWithTotalEmployees(@PathVariable("id") Long id) {
+        return successResponse(departmentService.getDepartmentByIdWithTotalEmployees(id));
     }
 
     @PostMapping("/department/create")

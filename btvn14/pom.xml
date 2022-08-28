@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.thinhlh</groupId>
-    <artifactId>BTVN13</artifactId>
+    <artifactId>BTVN14</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>BTVN13</name>
-    <description>BTVN13</description>
+    <name>BTVN14</name>
+    <description>BTVN14</description>
     <properties>
         <java.version>17</java.version>
     </properties>
