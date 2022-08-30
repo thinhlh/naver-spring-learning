@@ -29,7 +29,7 @@ Get all products based on the given price and property
 GET /products?price=0.0&condition=LESS_THAN
 Params: 
 condition: LESS_THAN | EQUAL | GREATER_THAN
-price: doubl
+price: double
 ```
 
 ### Get Cart Item detail
