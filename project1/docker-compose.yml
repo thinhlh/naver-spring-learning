@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+
+  db:
+    image: postgres
+    container_name: naver-project1-db
+    restart: always
+    ports:
+      - 5433:5432
+    environment:
+      POSTGRES_PASSWORD: postgres
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: naver-project1-app
+    restart: always
+    ports:
+      - 8080:8080
