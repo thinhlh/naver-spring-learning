@@ -1,9 +1,9 @@
-# 1st Naver Homework for 2nd Week
+# 1st Naver Homework for 3rd Week
 
 1. [Application Properties](#application-properties)
 2. [How to run server at local](#how-to-run-the-server-at-your-local)
 3. [How to generate error](#how-to-result-an-error-response)
-4[Application endpoints](#application-endpoints)
+4. [Application endpoints](#application-endpoints)
    1. [Employee](#employee)
    2. [Department](#department)
 
