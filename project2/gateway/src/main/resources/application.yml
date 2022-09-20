@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: currency-calculation-service
+          uri: lb://CURRENCY-CALCULATION-SERVICE/
+          predicates:
+            - Path=/exchange
