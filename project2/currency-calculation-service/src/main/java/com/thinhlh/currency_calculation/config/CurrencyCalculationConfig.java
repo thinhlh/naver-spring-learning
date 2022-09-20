@@ -1,4 +1,4 @@
-package currency_calculation.config;
+package com.thinhlh.currency_calculation.config;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;

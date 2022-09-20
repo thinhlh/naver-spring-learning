@@ -1,4 +1,4 @@
-package currency_calculation;
+package com.thinhlh.currency_calculation;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

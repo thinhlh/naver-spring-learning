@@ -1,4 +1,4 @@
-package currency_calculation.exceptions;
+package com.thinhlh.currency_calculation.exceptions;
 
 
 public class NotFoundException extends RuntimeException {

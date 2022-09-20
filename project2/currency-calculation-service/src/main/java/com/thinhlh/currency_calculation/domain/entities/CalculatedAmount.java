@@ -1,4 +1,4 @@
-package currency_calculation.models;
+package com.thinhlh.currency_calculation.domain.entities;
 
 import lombok.*;
 

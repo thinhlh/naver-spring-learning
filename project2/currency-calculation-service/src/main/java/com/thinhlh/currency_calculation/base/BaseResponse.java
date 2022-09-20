@@ -1,4 +1,4 @@
-package currency_calculation.base;
+package com.thinhlh.currency_calculation.base;
 
 public class BaseResponse<T> {
     private boolean success;
