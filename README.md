@@ -7,6 +7,7 @@
 4. BTVN 2nd - 2nd week
 5. Project 1
 6. BTVN 1st - 3rd week
+7. BTVN 2nd - 5th week
 ---
 
 ## Semantic Commit Messages
